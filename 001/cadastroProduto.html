@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+
+	<title>Cadastro de Produtos</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+
+
+	<h1>Dados do Cadastro</h1>
+
+	<form method="post" action="validar.html">
+		
+		<input type="reset" value="Limpar">
+
+		<br><br>
+		<label for="nome">Nome</label>
+		<br>
+		<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
+		
+		<br><br>
+		<label for="peso">Peso</label>
+		<br>
+		<input type="number" name="peso" id="peso" step="0.01" min="0" placeholder="Kg">
+		
+		<br><br>
+		<label for="unidadeDeMedida">Unidade de medida</label>
+		<br>
+		<input type="text" name="unidadeDeMedida" id="unidadeDeMedida" placeholder="KG / UNI / MTS / CAIXA">
+		
+		<br><br>
+		<label for="valor">Valor</label>
+		<br>
+		<input type="numer" name="valor" id="valor" step="0.01" min="0" placeholder="00.00">
+
+		<br><br>
+		<label for="etoque">Estoque inicial</label>
+		<br>
+		<input type="number" name="estoque" id="estoque">
+
+		<br><br>
+		<label for="mercado">Mercado</label>
+		<br>
+		<select name="mercado" id="mercado">
+			<option disabled selected value="0">Selecione:</option>
+			<option value="1">Interno</option>
+			<option value="2">Externo</option>
+		</select>
+
+		<br><br>
+		<label for="fornecedor">Fornecedor</label>
+		<br>
+		<select name="fornecedor" id="fornecedor">
+			<option disabled selected value="0">Selecione:</option>
+			<option value="1">Fornecedor1</option>
+			<option value="2">Fornecedor2</option>
+			<option value="3">Fornecedor3</option>
+			<option value="4">Fornecedor4</option>
+			<option value="5">Fornecedor5</option>
+			<option value="6">Fornecedor6</option>
+		</select>
+
+		<br><br>
+		<input type="submit" name="cadastrar" value="Cadastrar">
+
+
+
+		
+	</form>
+
+</body>
+</html>
