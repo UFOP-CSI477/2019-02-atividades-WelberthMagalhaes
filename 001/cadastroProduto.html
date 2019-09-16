@@ -16,41 +16,46 @@
 		<input type="reset" value="Limpar">
 
 		<br><br>
-		<label for="nome">Nome</label>
+		<label for="nome">Nome:</label>
 		<br>
 		<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
 		
 		<br><br>
-		<label for="peso">Peso</label>
+		<label for="peso">Peso:</label>
 		<br>
 		<input type="number" name="peso" id="peso" step="0.01" min="0" placeholder="Kg">
-		
+
 		<br><br>
-		<label for="unidadeDeMedida">Unidade de medida</label>
+		<label for="unidadeMedida">Unidade de venda:</label> 
 		<br>
-		<input type="text" name="unidadeDeMedida" id="unidadeDeMedida" placeholder="KG / UNI / MTS / CAIXA">
+		<select name="unidadeMedida" id="slctUnidadeMedida">
+			<option disabled selected value="0">Unidade</option>
+			<option value="1">KG</option>
+			<option value="2">UNIDADE</option>
+			<option value="3">METRO</option>
+			<option value="4">CAIXA</option>			
+		</select>
 		
 		<br><br>
-		<label for="valor">Valor</label>
+		<label for="valor">Valor:</label>
 		<br>
 		<input type="numer" name="valor" id="valor" step="0.01" min="0" placeholder="00.00">
 
 		<br><br>
-		<label for="etoque">Estoque inicial</label>
+		<label for="etoque">Estoque inicial:</label>
 		<br>
-		<input type="number" name="estoque" id="estoque">
+		<input type="number" name="estoque" id="estoque" min="0" value="0">
 
 		<br><br>
-		<label for="mercado">Mercado</label>
+		<label>Mercado:</label>
 		<br>
-		<select name="mercado" id="mercado">
-			<option disabled selected value="0">Selecione:</option>
-			<option value="1">Interno</option>
-			<option value="2">Externo</option>
-		</select>
+		<label for="mercInterno">Interno</label>
+		<input type="radio" name="mercado" id="mercInterno" value="I">
+		<label for="mercExterno">Externo</label>
+		<input type="radio" name="mercado" id="mercExterno" value="E">
 
 		<br><br>
-		<label for="fornecedor">Fornecedor</label>
+		<label for="fornecedor">Fornecedor:</label>
 		<br>
 		<select name="fornecedor" id="fornecedor">
 			<option disabled selected value="0">Selecione:</option>
@@ -63,12 +68,12 @@
 		</select>
 
 		<br><br>
-		<input type="submit" name="cadastrar" value="Cadastrar">
+		<input type="submit" name="salvar" value="Salvar">
 
-
-
-		
 	</form>
+	
+	<br><br>
+	<a href="01.html">Voltar</a>
 
 </body>
 </html>
