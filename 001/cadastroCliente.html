@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="br" dir="ltr">
+
+	<title>Cadastro de Clientes</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+	 <h1>Dados do cliente</h1>
+
+	 <br>
+	 <form action="validarCliente.html">
+	 	
+	 	<label for="nome">Nome:</label>
+	 	<input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente">
+	 	
+	 	<br><br>
+	 	<label for="cpf">CPF:</label>
+	 	<input type="text" name="cpf" id="cpf" placeholder="Apenas números!">
+
+	 	<br><br>
+	 	<label for="telefone">Telefone:</label>
+	 	<input type="text" name="telefone" id="telefone" placeholder="Apenas números!">
+
+	 	<br><br>
+	 	<label for="endereco">Endereço:</label>
+	 	<div id="endereco">
+	 		<br>
+	 		<label for="logradouro">Logradouro:</label>
+	 		<input type="text" name="logradouro" id="logradouro" placeholder="RUA/AVENIDA..." >
+	 		<label for="numero">Nº:</label>
+	 		<input type="number" name="numero" id="numero" min="0" placeholder="Nº">
+	 		<br>
+	 		<label for="bairro">Bairro:</label>
+	 		<input type="text" name="bairro" id="bairro">
+	 		<br>
+	 		<label for="cidade">Cidade:</label>
+	 		<input type="text" name="cidade" id="cidade">
+	 		<select name="estado" id="estado">
+	 			<option disabled selected value="0">Selecione o estado</option>
+	 			<option value="AC">Acre</option>
+	 			<option value="AL">Alagoas</option>
+	 			<option value="AP">Amapá</option>
+	 			<option value="AC">Acre</option>
+	 			<option value="AM">Amazonas</option>
+	 			<option value="BA">Bahia</option>
+	 			<option value="CE">Ceará</option>
+	 			<option value="DF">Distrito Federal</option>
+	 			<option value="ES">Espírito Santo</option>
+	 			<option value="GO">Goiás</option>
+
+
+	 		</select>
+	 		<label for="cep">CEP:</label>
+	 		<input type="number" name="cep" id="cep" placeholder="Apenas números!" min="0">
+
+	 	</div>
+
+
+
+
+
+
+
+
+
+	 </form>
+
+
+
+</body>
+</html>
