@@ -17,32 +17,33 @@
 		<div class="container">
 			<h1 class="display-3">The Run!</h1>
 			<p class="lead">Bem-vindo(a) a corrida de Carrinho de Rolimã</p>
+			<p class="lead-small">Máximo de 6 competidores.</p>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="home" style="display: block">
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm offset-md-1">
 
 				<form class="form" name="dados" id="dados">
 					<div class="form-group" id="group1">
-						<label for="nomeCompetidor" id="nomeCompetidor">Competidor(a)</label><br>
+						<label for="nomeCompetidor" id="labelCompetidor">Competidor(a)</label><br>
 						<input type="text" name="nomeCompetidor" id="nomeCompetidor">
 						<div id="alerta1" class="alert alert-danger" style="display: none">
 							<span> Preencha o nome do competidor!</span>
 						</div>
 					</div>
 
-					<div class="form-group" id="group2">
+					<!-- <div class="form-group" id="group2">
 						<label for="pLargada" id="labelLargada">Posição de Largada</label><br>
 						<input type="number" name="pLargada" id="pLargada">
 						<div id="alerta2" class="alert alert-danger" style="display: none">
 							<span> Preencha a posição de largada!</span>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="form-group" id="group3">
-						<label for="tempo" id="tempo">Tempo (s)</label><br>
+						<label for="tempo" id="labelTempo">Tempo (s)</label><br>
 						<input type="number" name="tempo" id="tempo">
 
 						<div id="alerta3" class="alert alert-danger" style="display: none">
@@ -57,33 +58,52 @@
 
 				<div class="row">
 					<div class="col-3 offset-md-1"><br>
-						<button class="btn btn-success" type="button" id="resultado">Resultado</button>
+						<button class="btn btn-success" type="button" id="resultado" onclick="resultado()">Resultado</button>
 					</div>
 				</div>
 
 			</div>
 			<div class="col-sm">
-				<table class="table">
-					<caption class="destaque">Ordem de Largada e Tempos</caption>
-					<thead>
-						<tr>
-							<th>Largada</th>
-							<th>Competidor(a)</th>
-							<th>Tempo (s)</th>
-						</tr>
-					</thead>
-
-					<tbody id="corpoTabelaLargada">
-
-					</tbody>
-
-				</table>
-			</div>
-			<div class="col-sm">
-				BLA
+				<div class="table-responsive">
+					<table class="table">
+						<caption class="destaque">Ordem de Largada e Tempos</caption>
+						<thead>
+							<tr>
+								<th>Largada</th>
+								<th>Competidor(a)</th>
+								<th>Tempo (s)</th>
+							</tr>
+						</thead>
+						<tbody id="corpoTabelaLargada">
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="table-responsive" id="tabelaResultado" style="display: none">
+		<table class="table table-bordered table-hover table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Posição</th>
+					<th>Largada</th>
+					<th>Compedidor(a)</th>
+					<th>Tempo(s)</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody id="corpoTabelaResultado">
+
+			</tbody>
+
+		</table>
+
+		<button class="btn btn-outline-dark" type="button" name="voltar" id="voltar">Voltar</button>
+
+	</div>
+
+
 
 	<script src="../js/corrida.js"></script>
 
