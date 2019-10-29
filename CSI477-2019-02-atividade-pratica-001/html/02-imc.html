@@ -37,9 +37,9 @@
 
           <div class="col">
             <div class="input-group mb-3">
-              <input class="form-control" type="number" name="altura" id="altura" placeholder="Digite sua altura em centímetros">
+              <input class="form-control" type="number" name="altura" id="altura" placeholder="Digite sua altura em metros (x,xx)">
               <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">(cm)</span>
+                <span class="input-group-text" id="basic-addon2">(m)</span>
               </div>
             </div>
             <div class="alert alert-danger" id="alerta2" style="display: none">
@@ -51,13 +51,41 @@
 
       <div class="row">
         <div class="col">
-          <button class="btn btn-outline-dark btn-block" id="calcular" type="button" data-toggle="modal" data-target="#imc1">Calcular</button>
+          <button class="btn btn-outline-dark btn-block" id="calcular" type="button" data-toggle="modal" data-target="#modalResultado">Calcular</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- MODAL -->
+  <div class="modal" id="modalResultado" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitulo"></h5>
+          <button class="close" type="button" data-dismiss="modal">
+            <span>x</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <p class="lead" id="modalCorpo">O Modal é o componente perfeito para você exibir imagens com efeito Lightbox, mostrar notificações ou até criar caixas de diálogo em seu site. Nesta aula você irá aprender as diferentes formas de personalização do Modal com Bootrastrap 4 para soltar a criatividade na hora de produzir seu próximo projeto.</p>
+        </div>
+
+        <div class="modal-footer">
+        <button class="btn btn-danger" type="button" data-dismiss"modal">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SCRIPTS -->
   <script src="../js/02-imc.js"></script>
+  <script src="../bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+  <script src="jquery-3.3.1.js"></script>
 </body>
 
 </html>
