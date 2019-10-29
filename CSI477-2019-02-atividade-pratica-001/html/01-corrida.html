@@ -15,7 +15,7 @@
 
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1 class="display-3">The Run!</h1>
+			<h1 class="display-3">The Race!</h1>
 			<p class="lead">Bem-vindo(a) a corrida de Carrinho de Rolimã</p>
 			<p class="lead-small">Máximo de 6 competidores.</p>
 		</div>
@@ -55,12 +55,11 @@
 					<input class="btn btn-warning" type="reset" value="Limpar">
 
 				</form>
-
-				<div class="row">
-					<div class="col-3 offset-md-1"><br>
-						<button class="btn btn-success" type="button" id="resultado" onclick="resultado()">Resultado</button>
-					</div>
+				<div class="button"><br>
+					<button class="btn btn-outline-success" type="button" id="resultado" onclick="resultado()">Resultado</button>
+					<!-- <button class="btn btn-outline-dark" type="button" id="newRace" onclick="novaCorrida()">Nova Corrida</button> -->
 				</div>
+
 
 			</div>
 			<div class="col-sm">
@@ -98,9 +97,9 @@
 			</tbody>
 
 		</table>
-
-		<button class="btn btn-outline-dark" type="button" name="voltar" id="voltar">Voltar</button>
-
+	</div>
+	<div class="btn mx-auto" id="btnVoltar" style="display: none">
+		<button class="btn btn-outline-dark" type="submit" onclick="location.href = '01-corrida.html' " id="voltar">Voltar</button>
 	</div>
 
 
