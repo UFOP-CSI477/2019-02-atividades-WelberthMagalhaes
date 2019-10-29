@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>IMC</title>
+
+  <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">IMC</h1>
+      <p class="lead">Índice de Massa Corporal</p>
+      <p class="lead-small">Bem-vindo(a). Digite seu peso e sua altura e descubra se está no peso ideal</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form" id="formulario">
+      <form>
+        <div class="row">
+          <div class="col">
+            <div class="input-group mb-3">
+              <input class="form-control " type="number" name="peso" id="peso" placeholder="Digite seu peso em quilos">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">(kg)</span>
+              </div>
+            </div>
+            <div class="alert alert-danger" id="alerta1" style="display: none">
+              <span>Preencha o campo!<span>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="input-group mb-3">
+              <input class="form-control" type="number" name="altura" id="altura" placeholder="Digite sua altura em centímetros">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">(cm)</span>
+              </div>
+            </div>
+            <div class="alert alert-danger" id="alerta2" style="display: none">
+              <span>Preencha o campo!<span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-dark btn-block" id="calcular" type="button" data-toggle="modal" data-target="#imc1">Calcular</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/02-imc.js"></script>
+</body>
+
+</html>
