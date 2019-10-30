@@ -23,9 +23,10 @@
     <div class="form" id="formulario">
       <form>
         <div class="row">
+          <!-- INPUT PESO -->
           <div class="col">
             <div class="input-group mb-3">
-              <input class="form-control " type="number" name="peso" id="peso" placeholder="Digite seu peso em quilos">
+              <input class="form-control " type="number" name="peso" id="peso" role="alert" placeholder="Digite seu peso em quilos">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">(kg)</span>
               </div>
@@ -34,10 +35,10 @@
               <span>Preencha o campo!<span>
             </div>
           </div>
-
+          <!-- INPUT ALTURA -->
           <div class="col">
             <div class="input-group mb-3">
-              <input class="form-control" type="number" name="altura" id="altura" placeholder="Digite sua altura em metros (x,xx)">
+              <input class="form-control" type="number" name="altura" id="altura" role="alert" placeholder="Digite sua altura em metros (x,xx)">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">(m)</span>
               </div>
@@ -49,23 +50,24 @@
         </div>
       </form>
 
+      <!-- BOTÃO CALCULAR -->
       <div class="row">
         <div class="col">
-          <button class="btn btn-outline-dark btn-block" id="calcular" type="button" data-toggle="modal" data-target="#modalResultado">Calcular</button>
+          <button class="btn btn-outline-dark btn-block" id="calcular" type="button" onclick="calcular()">Calcular</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- MODAL -->
-  <div class="modal" id="modalResultado" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
+  <div class="modal fade" id="modalResultado" tabindex="-1" role="dialog">
+    <div class="modal-dialog"role="document">
+      <div class="modal-content" id="modalContent">
 
         <div class="modal-header">
-          <h5 class="modal-title" id="modalTitulo"></h5>
-          <button class="close" type="button" data-dismiss="modal">
-            <span>x</span>
+          <h4 class="modal-title" id="modalTitulo"></h4>
+          <button class="close" type="button" data-dismiss="modal" onclick="clean()">
+            <span>&times;</span>
           </button>
         </div>
 
@@ -74,9 +76,8 @@
         </div>
 
         <div class="modal-footer">
-        <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
+        <button class="btn btn-danger" type="button" data-dismiss="modal" onclick="clean()">Fechar</button>
         </div>
-
       </div>
     </div>
   </div>
