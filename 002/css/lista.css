@@ -1,0 +1,56 @@
+body{
+  background: #EEEEFF;
+}
+
+h1{
+  font-family: "Verdana";
+  font-size: 36px;
+}
+
+h1, div{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+div{
+  padding-left: 5pt;
+  background-color: #ddddff;
+}
+
+h1{
+  font-family: "Arial";
+}
+
+
+caption{
+  font-family: serif;
+  font-size: 26pt;
+}
+
+table{
+width: 90%;
+padding: 5pt;
+}
+table, th, td{
+  border: solid;
+  border-width: 1px;
+  border-collapse: collapse;
+  background-color: #FFFFFD;
+}
+
+th{
+  font-size: 16pt;
+  font-family: serif;
+  padding: 3pt;
+}
+td{
+  font-size: 14pt;
+  padding: 2pt;
+}
+ tr:nth-child(3n+1) {
+  background-color: #a9a9a9;
+}

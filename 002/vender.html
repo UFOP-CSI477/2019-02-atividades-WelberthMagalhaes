@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="css/vender.css">
+
+  </head>
+  <body>
+    <h1>Vendas:</h1>
+
+    <div class="form">
+      <form class="" action="index.html" method="post">
+
+
+      <div >
+        <label for="produtos">Selecione o produto:</label><br>
+        <select class="select" id = "produtos" name="">
+          <option value="00">Selecione um produto</option>
+          <option value="01">Arroz</option>
+          <option value="02">Feijão</option>
+          <option value="03">Sal</option>
+          <option value="04">Macarrão</option>
+          <option value="05">Soja</option>
+        </select>
+      </div>
+
+      <div class="">
+        <label for="quantidade">Informe a quantidade do produto:</label><br>
+        <input type="number" id="quantidade" name="quantidade" value="">
+      </div>
+
+      <div>
+        <label for="pagamento">Forma de pagamento:</label><br>
+
+        <label for="r1">Dinheiro</label>
+        <input class="radio" type="radio" id= "r1" name="pagamento" value="D">
+        <label for="r2">Cartão</label>
+        <input class="radio" type="radio" id= "r2"  name="pagamento" value="C">
+      </div>
+
+      <div>
+        <label for="transporte">Escolha o modo de envio:</label><br>
+        <label for="r3">Expresso</label>
+        <input class="radio" id="r3" type="radio" name="transporte" value="E">
+        <label for="r4">Normal</label>
+        <input class="radio " id="r4" type="radio" name="transporte" value="N">
+      </div>
+
+      <div class="bot">
+        <input type="submit" name="form1" value="Confirmar">
+        <input type="reset" name="" value="Limpar">
+      </div>
+
+      </form>
+    </div>
+
+    <a href="Principal.html" class="home">Home</a>
+
+  </body>
+</html>

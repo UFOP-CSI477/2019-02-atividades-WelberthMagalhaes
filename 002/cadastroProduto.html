@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+
+	<title>Cadastro de Produtos</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/link.css">
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+
+</head>
+<body>
+
+
+	<h1>Dados do Produto</h1>
+
+	<form method="post" action="validarProduto.html">
+		
+		<input type="reset" value="Limpar">
+
+		<br><br>
+		<label for="nome">Nome:</label>
+		<br>
+		<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
+		
+		<br><br>
+		<label for="peso">Peso:</label>
+		<br>
+		<input type="number" name="peso" id="peso" step="0.01" min="0" placeholder="Kg">
+
+		<br><br>
+		<label for="unidadeMedida">Unidade de venda:</label> 
+		<br>
+		<select name="unidadeMedida" id="slctUnidadeMedida">
+			<option disabled selected value="0">Unidade</option>
+			<option value="1">KG</option>
+			<option value="2">UNIDADE</option>
+			<option value="3">METRO</option>
+			<option value="4">CAIXA</option>			
+		</select>
+		
+		<br><br>
+		<label for="valor">Valor:</label>
+		<br>
+		<input type="numer" name="valor" id="valor" step="0.01" min="0" placeholder="00.00">
+
+		<br><br>
+		<label for="etoque">Estoque inicial:</label>
+		<br>
+		<input type="number" name="estoque" id="estoque" min="0" value="0">
+
+		<br><br>
+		<label>Mercado:</label>
+		<br>
+		<label for="mercInterno">Interno</label>
+		<input type="radio" name="mercado" id="mercInterno" value="I">
+		<label for="mercExterno">Externo</label>
+		<input type="radio" name="mercado" id="mercExterno" value="E">
+
+		<br><br>
+		<label for="fornecedor">Fornecedor:</label>
+		<br>
+		<select name="fornecedor" id="fornecedor">
+			<option disabled selected value="0">Selecione:</option>
+			<option value="1">Fornecedor1</option>
+			<option value="2">Fornecedor2</option>
+			<option value="3">Fornecedor3</option>
+			<option value="4">Fornecedor4</option>
+			<option value="5">Fornecedor5</option>
+			<option value="6">Fornecedor6</option>
+		</select>
+
+		<br><br>
+		<input type="submit" name="salvar" value="Salvar">
+
+	</form>
+	
+	<br><br>
+	<a href="principal.html">Home</a>
+
+</body>
+</html>
