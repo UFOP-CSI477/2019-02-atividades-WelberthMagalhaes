@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+
+	<title>Cadastro de Produtos</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css">
+
+</head>
+<body>
+
+
+	<div class="jumbotron">
+		<h1>Dados do Produto</h1>
+	</div>
+
+	<form method="post" action="validarProduto.html">
+		<div class="container">
+			<div class="row">
+			<div class="col-md px-md-5">
+				<button class="btn btn-outline-danger btn-sm" type="reset">Limpar</button>
+				<button class="btn btn-outline-dark btn-sm" type="button" action="principal.html">Home</button>
+
+				<br>
+				<label for="nome">Nome:</label>
+				<input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
+			
+				<label for="peso">Peso:</label>
+				<input class="form-control" type="number" name="peso" id="peso" step="0.01" min="0" placeholder="Kg">
+
+			
+				<label for="unidadeMedida">Unidade de venda:</label> 			
+				<select class="custom-select" name="unidadeMedida" id="slctUnidadeMedida">
+					<option disabled selected value="0">Unidade</option>
+					<option value="1">KG</option>
+					<option value="2">UNIDADE</option>
+					<option value="3">METRO</option>
+					<option value="4">CAIXA</option>			
+				</select>
+			</div>
+
+		 	<div class="col-md px-md-5">
+		 		<label for="valor">Valor:</label>
+
+				<input class="form-control" type="numer" name="valor" id="valor" step="0.01" min="0" placeholder="00.00">
+
+				<label for="etoque">Estoque inicial:</label>		
+				<input class="form-control" type="number" name="estoque" id="estoque" min="0" value="0">
+		
+				
+				
+				
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="mercado" id="mercInterno" value="I">
+					<label class="form-check-label" for="mercInterno">Interno</label>
+				</div>	
+				
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="mercado" id="mercExterno" value="E">
+					<label class="form-check-label" for="mercExterno">Externo</label>
+				</div>
+
+				
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="fornecedor">Fornecedor:</label>	
+					</div>
+					<select class="custom-select" name="fornecedor" id="fornecedor">	
+					
+						<option disabled selected value="0">Selecione:</option>
+						<option value="1">Fornecedor1</option>
+						<option value="2">Fornecedor2</option>
+						<option value="3">Fornecedor3</option>
+						<option value="4">Fornecedor4</option>
+						<option value="5">Fornecedor5</option>
+						<option value="6">Fornecedor6</option>
+					</select>					
+				</div>
+
+		
+				<input class="btn btn-info btn-sm px-md-5" type="submit" name="salvar" value="Salvar">
+			</div>
+		</div>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+
+

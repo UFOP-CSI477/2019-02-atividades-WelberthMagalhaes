@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="br" dir="ltr">
+
+	<title>Cadastro de Clientes</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css">
+	
+
+</head>
+<body>
+	<div class="jumbotron">
+		<h1>Dados do cliente</h1>
+	</div>
+
+	<form action="validarCliente.html">
+		 <div class="row">
+		 	<div class="col-md px-md-5">			 	
+			 	<button class="btn btn-outline-danger btn-sm" type="reset">Limpar</button>
+				<button class="btn btn-outline-dark btn-sm" type="button" action="principal.html">Home</button>
+
+				<div class="form-group mx-auto">
+					<label for="nome">Nome:</label>
+					<input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do cliente">		 	
+					<label for="cpf">CPF:</label>
+					<input class="form-control" type="text" name="cpf" id="cpf" placeholder="Apenas números">
+				</div>
+
+				<div class="form-group mx-auto">
+					<label for="telefone">Telefone:</label>
+					<input class="form-control" type="text" name="telefone" id="telefone" placeholder="Apenas números">
+				</div>				
+			</div>
+
+			<div class="col-md px-md-5">
+				<div class="form-group mx-auto" id="endereco">
+				 		
+				 	<label for="endereco">Endereço:</label>
+
+				 	<label for="logradouro">Logradouro:</label>
+				 	<input class="form-control form-control-sm" type="text" name="logradouro" id="logradouro" placeholder="RUA/AVENIDA..." >
+				 	<label for="numero">Nº:</label>
+				 	<input class="form-control form-control-sm" type="number" name="numero" id="numero" min="0" placeholder="Nº">
+				 		
+				 	<label for="bairro">Bairro:</label>
+				 	<input class="form-control form-control-sm" type="text" name="bairro" id="bairro">
+				 		
+				 	<label for="cidade">Cidade:</label>
+				 	<input class="form-control form-control-sm" type="text" name="cidade" id="cidade">
+				 		
+				 	<label for="cidade">Estado:</label>
+				 	<input class="form-control form-control-sm" type="text" name="estado" id="estado" maxlength="2" placeholder="--">
+
+				 	<label for="cep">CEP:</label>
+				 	<input class="form-control form-control-sm" type="number" name="cep" id="cep" placeholder="Apenas números!" min="0">
+
+				 </div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
