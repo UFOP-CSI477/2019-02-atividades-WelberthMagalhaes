@@ -1,6 +1,9 @@
 @extends('principal')
 
 @section('conteudo')
+
+<!-- VIEW SUBJECTS - TIPOS DE PROTOCOLOS -->
+
 <table class="table table-striped table-bordered">
    <thead class="table-light">
      <tr>

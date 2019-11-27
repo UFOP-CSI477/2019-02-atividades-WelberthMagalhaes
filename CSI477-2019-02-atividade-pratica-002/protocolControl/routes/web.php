@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Retorna página Principal
+Route::get('/','PaginaController@index');
 
-Route::get('protocolos', 'SubjectController@index');
+// Retorna index de subject(tipos de protocolos) apresentados em ordem ascendente
+Route::get('/area_geral', 'SubjectController@index');
