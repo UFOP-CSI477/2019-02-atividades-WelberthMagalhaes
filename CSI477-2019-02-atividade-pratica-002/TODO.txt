@@ -1,0 +1,8 @@
+
+# Como fazer para não pedir autenticação quando clicar em Área do Usuário se já estiver logado
+# Tela Área de Usuário
+# Cadastro de usuários
+
+
+
+# CRUD admin requests
