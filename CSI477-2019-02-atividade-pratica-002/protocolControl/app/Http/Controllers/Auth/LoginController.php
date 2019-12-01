@@ -25,7 +25,22 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //  public function index(){
+    //    return view('login.index');
+    //  }
+    //
+    //
+    // public function authenticate(Request $request)
+    // {
+    //   $credentials = $request->only('email', 'password');
+    //
+    //   if (Auth::attempt($credentials)) {
+    //     // Authentication passed...
+    //     return redirect()->intended('users_area');
+    //   }else {
+    //     return redirect()->back()->with('msg', 'Acesso negado para estas credendiais');
+    //   }
+    // }
 
     /**
      * Create a new controller instance.
@@ -34,6 +49,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+       $this->middleware('guest')->except('logout');
     }
 }
