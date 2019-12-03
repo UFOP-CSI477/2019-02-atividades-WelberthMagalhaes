@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class User_areaController extends Controller
 {
-    public function index(){
-      return view('auth.users_area.index');
+    public function index()
+    {
+      return view('users_area.index');
     }
 }

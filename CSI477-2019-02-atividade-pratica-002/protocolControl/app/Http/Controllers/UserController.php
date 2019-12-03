@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+Use Auth;
 
 class UserController extends Controller
 {
@@ -14,8 +15,8 @@ class UserController extends Controller
     */
    public function index()
    {
-       // $users = User::orderBy('nome')->get();
-       // return view ('users.index', [ 'users' => $users]);
+       $users = User::orderBy('name')->get();
+       return view ('users.index', [ 'users' => $users]);
    }
 
    /**
@@ -25,8 +26,7 @@ class UserController extends Controller
     */
    public function create()
    {
-       $estados = Estado::orderBy('nome')->get();
-       return view('users.create', ['estados' => $estados]);
+       return view('users.create');
    }
 
    /**
@@ -43,16 +43,27 @@ class UserController extends Controller
 
        //Gravar
        //Opção1
-       // $c = new User;
-       // $c->nome = $request->nome;
-       // $c->estado_id = $request->estado_id;
-       // $c->save();
+         $u = new User;
+         $u->name = $request->name;
+         $u->email = $request->email;
+         $u->password = bcrypt($request->password);
+         $u->type = $request->type;
+         $u->save();
 
        //Opção2
-       User::create($request->all());//nome das tags de entrada com mesmo nome do BD
+       //User::create($request->all());//nome das tags de entrada com mesmo nome do BD
 
        //return redirect('/users');
-       return redirect()->route('users.index');
+       if(Auth::check()){
+         if(Auth::user()->type == 1){
+           return redirect()->route('admins_area')->with('msg', 'Cadastro realizado com sucesso!');
+         }else{
+           return redirect()->route('users_area')->with('msg', 'Cadastro realizado com sucesso!');
+         }
+       }else{
+         return redirect()->route('login')->with('msg', 'Cadastro realizado com sucesso!');
+       }
+
 
    }
 
