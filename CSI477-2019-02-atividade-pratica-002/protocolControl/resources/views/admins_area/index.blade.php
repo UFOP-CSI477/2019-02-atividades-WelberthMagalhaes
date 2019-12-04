@@ -29,7 +29,7 @@
           <p class="card-text">Realizar cadastro de novos usuários</p>
         </div>
         <div class="card-footer">
-          <a href="{{ route('users.create'), }}" class="btn btn-primary">Acessar</a>
+          <a href="{{ route('users.create') }}" class="btn btn-primary">Acessar</a>
           <!-- <small class="text-muted">Atualizados 3 minutos atrás</small> -->
         </div>
       </div>

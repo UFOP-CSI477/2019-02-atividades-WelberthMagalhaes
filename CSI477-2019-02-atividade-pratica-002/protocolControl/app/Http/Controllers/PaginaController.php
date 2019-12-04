@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-Use User;
+Use App\User;
 
 class PaginaController extends Controller
 {
@@ -18,13 +18,16 @@ class PaginaController extends Controller
   }
 
   public function loginIndex(){
-    if(Auth::check())
-    {
-      return view('users_area.index');
-    }else
-    {
-      return view('login.index');
-    }
+
+    if(Auth::check()){
+
+      if(Auth::user()->type == 1){
+        return view('admins_area.index');
+      }else {
+        return view('users_area.index');
+      }
+
+    } else{ return view('login.index'); }
   }
 
   public function admins_area(){
@@ -43,13 +46,14 @@ class PaginaController extends Controller
     if (Auth::attempt($credentials))
     {
       // Authentication passed...
-      if($request->type == 1){
+      if(Auth::user()->type == 1){
         return redirect()->intended('admins_area');
       }else{
         return redirect()->intended('users_area');
       }
     }else {
-     return redirect()->back()->with('msg', 'Acesso negado para estas credendiais');
+      session()->flash('msg1', 'Acesso negado para estas credendiais');
+      return redirect()->back();
     }
   }
 

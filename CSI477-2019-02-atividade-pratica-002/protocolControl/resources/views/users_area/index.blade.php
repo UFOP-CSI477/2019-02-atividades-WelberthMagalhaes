@@ -4,14 +4,6 @@
 <!-- TELA ÁREA DE USUÁRIO LOGADO -->
 <div class="container">
   <div class="row justify-content-end">
-    @if(session('msg'))
-      <div class="alert alert-succes">
-        {{session('msg')}}
-        <button type="button" class="close" data-dismiss="alert" onclick= "$('.alert').alert()" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-    @endif
 
     <ul class="nav-bar">
       <li class="nav-item">
@@ -28,7 +20,7 @@
           <p class="card-text">Realizar cadastro de novos usuários</p>
         </div>
         <div class="card-footer">
-          <a href="{{ route('users.create'), }}" class="btn btn-primary">Acessar</a>
+          <a href="{{ route('users.create') }}" class="btn btn-primary">Acessar</a>
           <!-- <small class="text-muted">Atualizados 3 minutos atrás</small> -->
         </div>
       </div>

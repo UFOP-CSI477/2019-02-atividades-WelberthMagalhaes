@@ -1,8 +1,8 @@
 
-# Como fazer para não pedir autenticação quando clicar em Área do Usuário se já estiver logado
-# Tela Área de Usuário
-# Cadastro de usuários
-# CORRIGIR ENCAMINHAMENTO DE VIEWS ADMIN E USER
+# ENCAMINHAMENTO DE VIEWS ADMIN E USER PRONTO
+# Cadastro de usuários: somente quem ta logado cadastra novos usuários
+# Verificar o que falta fazer no pdf
+
 
 
 # CRUD admin requests
