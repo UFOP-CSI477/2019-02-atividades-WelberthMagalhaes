@@ -24,20 +24,21 @@
     <div class="card-deck">
       <div class="card text-center">
         <!-- <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card"> -->
-        <div class="card-header">Novo Usuário</div>
+        <div class="card-header">Usuários</div>
         <div class="card-body">
-          <p class="card-text">Realizar cadastro de novos usuários</p>
+          <p class="card-text">Gerenciamento de usuários</p>
         </div>
         <div class="card-footer">
-          <a href="{{ route('users.create') }}" class="btn btn-primary">Acessar</a>
+          <!-- Encaminhar para tela de visualização de usuários-->
+          <a href="{{ route('users.index'), }}" class="btn btn-primary">Acessar</a>
           <!-- <small class="text-muted">Atualizados 3 minutos atrás</small> -->
         </div>
       </div>
       <div class="card text-center">
         <!-- <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card"> -->
         <div class="card-body">
-          <h5 class="card-title">Incluir Requerimento</h5>
-          <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+          <h5 class="card-title">Protocolos</h5>
+          <p class="card-text">Gerenciamento de protocolos e listagem de requerimentos.</p>
         </div>
         <div class="card-footer">
           <a href="#" class="btn btn-primary">Acessar</a>

@@ -9,6 +9,10 @@
        <th>Nome</th>
        <th>Email</th>
        <th>Tipo</th>
+       @if (Auth::user()->type == 1)
+       <th>Ação</th>
+       @endif
+
      </tr>
    </thead>
    <tbody>
@@ -22,6 +26,9 @@
               Usuário
             @endif
        </td>
+       @if (Auth::user()->type == 1)
+       <td><a href="{{ route('users.edit', $u->id) }}">Editar</a></td>
+       @endif
      </tr>
  @endforeach
    </tbody>

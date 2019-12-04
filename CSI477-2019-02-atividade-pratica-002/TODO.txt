@@ -1,8 +1,7 @@
 
+
 # ENCAMINHAMENTO DE VIEWS ADMIN E USER PRONTO
 # Cadastro de usuários: somente quem ta logado cadastra novos usuários
-# Verificar o que falta fazer no pdf
-
-
-
-# CRUD admin requests
+# Edit de usuário feito
+# Editar users.edit users.update
+# Criar admin CRUD de requests e subjects(protocolos)

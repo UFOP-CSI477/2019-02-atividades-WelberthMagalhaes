@@ -37,7 +37,11 @@ class UserController extends Controller
     */
    public function store(Request $request)
    {
-        //Gravar
+       //dd($request); //faz o dump(printf da variavel e encerra
+
+       //Validação
+
+       //Gravar
        //Opção1
          $u = new User;
          $u->name = $request->name;
@@ -48,21 +52,20 @@ class UserController extends Controller
 
        //Opção2
        //User::create($request->all());//nome das tags de entrada com mesmo nome do BD
+
+       //return redirect('/users');
        if(Auth::check()){
-
          if(Auth::user()->type == 1){
-           session()->flash('msg1', 'Usuário cadastrado com sucesso!');
-           return redirect()->route('users.index');
-         }else {
-           session()->flash('msg1', 'Usuário cadastrado com sucesso!');
-           return redirect()->route('users_area');
+           return redirect()->route('admins_area')->with('msg', 'Cadastro realizado com sucesso!');
+         }else{
+           return redirect()->route('users_area')->with('msg', 'Cadastro realizado com sucesso!');
          }
-
+       }else{
+         return redirect()->route('login')->with('msg', 'Cadastro realizado com sucesso!');
        }
-      session()->flash('msg1', 'Usuário cadastrado com sucesso!');
-      return redirect()->route('login');
 
-    }
+
+   }
 
    /**
     * Display the specified resource.

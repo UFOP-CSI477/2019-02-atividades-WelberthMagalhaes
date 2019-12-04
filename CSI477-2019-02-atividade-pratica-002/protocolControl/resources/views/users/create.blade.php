@@ -4,7 +4,7 @@
 <!-- TELA DE CRIAÇÃO DE USUÁRIO -->
 
     <div class="wrapper">
-        <form method="post" action="{{route('users.store')}}">
+        <form method="post" action="{{ route('users.store') }}">
           @csrf
           <div class="form-group">
             <label>Nome: <input type="text" name="name"></label><br>
@@ -14,10 +14,8 @@
               <label>Tipo:</label>
               <select class="" name="type" required>
                 <option value="2">Usuário</option>
-                @if($USUARIO)
-                  @if( $USUARIO->type == 1)
-                    <option value="1">Administrador</option>
-                  @endif
+                @if( $USUARIO->type == 1)
+                  <option value="1">Administrador</option>
                 @endif
               </select><br>
 
