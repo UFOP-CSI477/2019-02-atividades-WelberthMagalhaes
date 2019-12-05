@@ -5,16 +5,7 @@
 <h2 class="text-muted text-center">Área do Administrador</h2>
 <div class="container">
   <div class="row justify-content-end">
-    @if(session('msg'))
-      <div class="alert alert-succes">
-        {{session('msg')}}
-        <button type="button" class="close" data-dismiss="alert" onclick= "$('.alert').alert()" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-    @endif
-
-    <ul class="nav-bar">
+      <ul class="nav-bar">
       <li class="nav-item">
         <a class="btn btn-outline-dark" href="/logout">Log Out</a>
       </li>
@@ -24,7 +15,7 @@
     <div class="card-deck">
       <div class="card text-center">
         <!-- <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card"> -->
-        <div class="card-header">Usuários</div>
+        <h4 class="card-header"><strong>Usuários</strong></h4>
         <div class="card-body">
           <p class="card-text">Gerenciamento de usuários</p>
         </div>
@@ -36,8 +27,8 @@
       </div>
       <div class="card text-center">
         <!-- <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card"> -->
+        <h4 class="card-header"><strong>Protocolos</strong></h4>
         <div class="card-body">
-          <h5 class="card-title">Protocolos</h5>
           <p class="card-text">Gerenciamento de protocolos e listagem de requerimentos.</p>
         </div>
         <div class="card-footer">

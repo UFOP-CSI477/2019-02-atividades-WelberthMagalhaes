@@ -28,6 +28,17 @@
       </ul>
     </nav>
 
+    @if(Session::has('msg'))
+      <div class="alert alert-danger">
+        {{session('msg')}}
+      </div>
+    @endif
+    @if(Session::has('msg1'))
+      <div class="alert alert-success">
+        {{session('msg1')}}
+      </div>
+    @endif
+
     <!-- Conteúdo parte central //-->
     @yield('conteudo')
 

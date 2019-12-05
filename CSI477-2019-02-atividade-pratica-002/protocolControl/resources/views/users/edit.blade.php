@@ -2,37 +2,34 @@
 
 @section('conteudo')
 
-  <form method="post" action="{{ route('users.update', $user->id) }}">
+  <div class="form-group">
+    <form method="post" action="{{ route('users.update', $user->id) }}">
 
-    @csrf
-    @method('PATCH')
+      @csrf
+      @method('PATCH')
 
-    <p>Nome: <input type="text" name="name" value="{{ $user->nome }}"></p>
-    <p>Email: <input type="email" name="email" value="{{ $user->email }}"></p>
+      <div class="form-group">
+        <label>Nome: <input class="form-control" type="text" name="name" value="{{ $user->name }}"></label><br>
+        <label>Email: <input class="form-control" type="email" name="email" value="{{ $user->email }}"></label><br>
 
-    <p>Estado: </p>
-    @if(Auth::user()->type == 1)
-      <select name="type">          
-          <option value="{{ $user->type }}">
-            @if( $user->type == 1)
-              Administrador
-            @else
-              Usuário
-            @endif
-          </option>
-          <option value="{{ $user->type }}">
-             @if( $user->type == 1)
-              Administrador
-            @else
-              Usuário
-            @endif            
-          </option>
-        @endforeach
-      </select>
-    @endif
+        <label>Tipo: </label><br>
+        @if(Auth::user()->type == 1)
+          <select class="custom-select" name="type" style="width:15%; ">
+              <option value="1"
+                @if( $user->type == 1)
+                  selected
+                @endif >Administrador</option>
+              <option value="2"
+                @if( $user->type == 2)
+                 selected
+                @endif >Usuário</option>
+          </select>
+        @endif
+        <br>
+        <input type="submit" name="btnSalvar" value="Incluir">
+      </div>
 
-    <input type="submit" name="btnSalvar" value="Incluir">
-
-  </form>
+    </form>
+  </div>
 
 @endsection

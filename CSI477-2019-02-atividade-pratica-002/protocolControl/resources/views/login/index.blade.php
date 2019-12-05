@@ -18,11 +18,11 @@
     <!-- Login Form -->
     <form method="POST" action="/authenticate">
       @csrf
-      <div class="form-group">
+      <div class="form-group" style="margin-left:3cm">
 
-          <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" required>
+          <input class="form-control" type="email" id="email" class="fadeIn second" name="email" placeholder="email" style="width:70%" required>
           <br>
-          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+          <input class="form-control" type="password" id="password" class="fadeIn third" name="password" placeholder="password" style="width:70%;margin" required>
 
 
       </div>

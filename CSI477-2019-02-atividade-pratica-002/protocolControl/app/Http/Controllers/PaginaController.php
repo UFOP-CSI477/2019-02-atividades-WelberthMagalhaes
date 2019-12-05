@@ -46,7 +46,7 @@ class PaginaController extends Controller
     if (Auth::attempt($credentials))
     {
       // Authentication passed...
-      if($request->type == 1){
+      if(Auth::user()->type == 1){
         return redirect()->intended('admins_area');
       }else{
         return redirect()->intended('users_area');

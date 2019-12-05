@@ -33,5 +33,9 @@
  @endforeach
    </tbody>
  </table>
- <a class=" btn btn-primary" href="users_area">Voltar</a>
+  @if (Auth::user()->type == 1)
+    <a class=" btn btn-primary" href="admins_area">Voltar</a>
+  @else
+    <a class=" btn btn-primary" href="users_area">Voltar</a>
+  @endif
 @endsection

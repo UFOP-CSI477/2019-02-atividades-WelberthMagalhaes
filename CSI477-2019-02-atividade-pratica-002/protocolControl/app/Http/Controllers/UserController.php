@@ -56,12 +56,12 @@ class UserController extends Controller
        //return redirect('/users');
        if(Auth::check()){
          if(Auth::user()->type == 1){
-           return redirect()->route('admins_area')->with('msg', 'Cadastro realizado com sucesso!');
+           return redirect()->route('admins_area')->with('msg1', 'Cadastro realizado com sucesso!');
          }else{
-           return redirect()->route('users_area')->with('msg', 'Cadastro realizado com sucesso!');
+           return redirect()->route('users_area')->with('msg1', 'Cadastro realizado com sucesso!');
          }
        }else{
-         return redirect()->route('login')->with('msg', 'Cadastro realizado com sucesso!');
+         return redirect()->route('login')->with('msg1', 'Cadastro realizado com sucesso!');
        }
 
 
@@ -87,8 +87,8 @@ class UserController extends Controller
     */
    public function edit(User $user)
    {
-     $estados = Estado::orderBy('nome')->get();
-     return view('users.edit', ['estados' => $estados, 'user' => $user]);
+     $users = User::orderBy('name')->get();
+     return view('users.edit', ['users' => $users, 'user' => $user]);
 
    }
 
@@ -101,7 +101,10 @@ class UserController extends Controller
     */
    public function update(Request $request, User $user)
    {
-       dd($request);
+       $user->fill($request->all());// Atualiza campos do objeto
+       $user->save();// Persistência no BD
+       session()->flash('msg1', 'Usuário atualizado com sucesso!');
+       return redirect()->route('users.index'); 
    }
 
    /**

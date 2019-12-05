@@ -4,15 +4,6 @@
 <!-- TELA ÁREA DE USUÁRIO LOGADO -->
 <div class="container">
   <div class="row justify-content-end">
-    @if(session('msg'))
-      <div class="alert alert-succes">
-        {{session('msg')}}
-        <button type="button" class="close" data-dismiss="alert" onclick= "$('.alert').alert()" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-    @endif
-
     <ul class="nav-bar">
       <li class="nav-item">
         <a class="btn btn-outline-dark" href="/logout">Log Out</a>
