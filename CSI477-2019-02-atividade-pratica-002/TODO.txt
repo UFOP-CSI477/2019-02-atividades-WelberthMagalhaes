@@ -2,5 +2,4 @@
 
 # ENCAMINHAMENTO DE VIEWS ADMIN E USER PRONTO
 # Cadastro de usuários: somente quem ta logado cadastra novos usuários
-# Fazer Delete user
 # Criar admin CRUD de requests e subjects(protocolos)

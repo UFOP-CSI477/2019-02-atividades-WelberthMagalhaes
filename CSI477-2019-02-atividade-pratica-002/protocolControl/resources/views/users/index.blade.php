@@ -3,8 +3,8 @@
 @section('conteudo')
 
 <!-- TABELA DE EXIBIÇÃO DE DADOS -->
-<table class="table table-striped table-bordered">
-   <thead class="table-light">
+<table class="table table-hover table-bordered">
+   <thead class="table-secondary">
      <tr>
        <th>Nome</th>
        <th>Email</th>
