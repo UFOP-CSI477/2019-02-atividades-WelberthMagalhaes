@@ -31,6 +31,7 @@ Route::group(['middleware'=>['auth']], function()
   });
 
   Route::resource('/users','UserController');
+  Route::resource('/subects','SubjectController');
   Route::get('/users_area','User_areaController@index')->name('users_area');
   Route::get('/admins_area','PaginaController@admins_area')->name('admins_area');
 

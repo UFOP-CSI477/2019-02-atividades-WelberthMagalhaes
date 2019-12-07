@@ -32,7 +32,7 @@
           <p class="card-text">Gerenciamento de protocolos e listagem de requerimentos.</p>
         </div>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary">Acessar</a>
+        <a href="{{ route('subjects.index') }}" class="btn btn-primary">Acessar</a>
           <!-- <small class="text-muted">Atualizados 3 minutos atrás</small> -->
         </div>
       </div>

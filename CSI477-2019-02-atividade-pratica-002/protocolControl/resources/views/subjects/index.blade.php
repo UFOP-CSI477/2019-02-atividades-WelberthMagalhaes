@@ -10,6 +10,7 @@
        <th>Código</th>
        <th>Nome</th>
        <th>Preço</th>
+       <th>Ação</th>
      </tr>
    </thead>
    <tbody>
@@ -18,8 +19,14 @@
        <td>{{ $s->id }}</td>
        <td>{{ $s->name }}</td>
        <td>{{ $s->price }}</td>
+       <td><a href="{{ route('subjects.edit', $s->id) }}">Editar</a></td>
      </tr>
  @endforeach
    </tbody>
  </table>
-@endsection
+
+ <a class=" btn btn-primary" href="admins_area">Voltar</a>
+ <a class=" btn btn-info" href="{{ route('subects.create') }}">Novo</a>
+
+
+ @endsection

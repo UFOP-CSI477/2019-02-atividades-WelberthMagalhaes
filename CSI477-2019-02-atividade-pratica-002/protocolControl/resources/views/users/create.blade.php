@@ -4,25 +4,27 @@
 <!-- TELA DE CRIAÇÃO DE USUÁRIO -->
 
     <div class="wrapper">
+      <div class="form-group">
         <form method="post" action="{{ route('users.store') }}">
           @csrf
           <div class="form-group">
-            <label>Nome: <input type="text" name="name"></label><br>
-            <label>Email: <input type="email" name="email" required></label><br>
-            <label>Senha: <input type="password" name="password" required></label>
+            <label>Nome:</label><br>
+            <input class="form-control" type="text" name="name">
+            <label>Email:</label><br>
+            <input class="form-control" type="email" name="email" required>
+            <label >Senha:</label>
+            <input class="form-control" type="password" name="password" required>
             <div class="form-group">
               <label>Tipo:</label>
-              <select class="" name="type" required>
-                <option value="2">Usuário</option>
-                @if( $USUARIO->type == 1)
-                  <option value="1">Administrador</option>
-                @endif
+              <select class="form-control" name="type" required>
+                <option value="2" selected>Usuário</option>
               </select><br>
 
-              <input class="btn btn-primary" type="submit" name="btnSalvar" value="Incluir">
+              <button class="btn btn-primary" type="submit" name="btnSalvar">Incluir</button>
             </div>
-          </div>
+          </div>      
         </form>
       </div>
+    </div>
 
 @endsection
