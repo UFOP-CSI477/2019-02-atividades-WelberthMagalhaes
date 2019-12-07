@@ -17,7 +17,10 @@
             <div class="form-group">
               <label>Tipo:</label>
               <select class="form-control" name="type" required>
-                <option value="2" selected>Usuário</option>
+                <option value="2">Usuário</option>
+                @if (Auth::user()->type == 1)
+                <option value="1">Administrador</option>
+                @endif
               </select><br>
 
               <button class="btn btn-primary" type="submit" name="btnSalvar">Incluir</button>

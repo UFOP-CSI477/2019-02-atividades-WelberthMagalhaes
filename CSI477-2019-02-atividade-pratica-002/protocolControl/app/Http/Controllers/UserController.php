@@ -56,7 +56,7 @@ class UserController extends Controller
        //return redirect('/users');
        if(Auth::check()){
          if(Auth::user()->type == 1){
-           return redirect()->route('admins_area')->with('msg1', 'Cadastro realizado com sucesso!');
+           return redirect()->route('users.index')->with('msg1', 'Cadastro realizado com sucesso!');
          }else{
            return redirect()->route('users_area')->with('msg1', 'Cadastro realizado com sucesso!');
          }

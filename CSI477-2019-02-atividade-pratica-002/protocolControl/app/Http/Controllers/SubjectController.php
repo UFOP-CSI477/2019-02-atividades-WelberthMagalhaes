@@ -72,7 +72,9 @@ class SubjectController extends Controller
     * @param  \App\Subject  $subject
     * @return \Illuminate\Http\Response
     */
-  public function destroy(){
-
+  public function destroy(Subject $subject){
+    
+    $subject->delete();
+    return redirect()->route('subjects.index');
   }
 }
