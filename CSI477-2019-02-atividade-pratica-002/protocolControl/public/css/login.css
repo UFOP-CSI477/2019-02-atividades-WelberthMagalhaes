@@ -76,7 +76,12 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
-
+/* DROPDOWN-CONTENT */
+.dropdown-content {
+  
+  position: absolute;
+  right: 0;
+}
 
 /* FORM TYPOGRAPHY*/
 

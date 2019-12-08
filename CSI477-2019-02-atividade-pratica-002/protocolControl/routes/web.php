@@ -27,11 +27,12 @@ Route::group(['middleware'=>['auth']], function()
 {
   Route::get('/logout', function()
   { Auth::logout();
-    return redirect()->route('initial');
+    return redirect()->route('login');
   });
 
   Route::resource('/users','UserController');
   Route::resource('/subects','SubjectController');
+  Route::resource('/requestes', 'RequesteController');
   Route::get('/users_area','User_areaController@index')->name('users_area');
   Route::get('/admins_area','PaginaController@admins_area')->name('admins_area');
 

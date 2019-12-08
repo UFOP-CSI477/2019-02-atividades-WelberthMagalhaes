@@ -26,6 +26,14 @@
           <li class="nav-item"><a href="/loginIndex" class="nav-link">Usuário</a></li>
           <li class="nav-item"><a href="/loginIndex" class="nav-link">Administrador</a></li>
       </ul>
+      <ul class="navbar-nav ml-auto">
+          @if(Auth::check())
+            <li class="nav-item dropdown"><a href="/logout" class="nav-link">Log Out</a></li>
+          @else
+            <li class="nav-item dropdown"><a href="/loginIndex" class="nav-link">Log In</a></li>
+          @endif
+      </ul>
+
     </nav>
 
     @if(Session::has('msg'))

@@ -35,8 +35,8 @@
  </table>
   @if (Auth::user()->type == 1)
     <a class=" btn btn-primary" href="admins_area">Voltar</a>
-    <a class=" btn btn-info" href="{{ route('users.create') }}">Novo</a>
   @else
     <a class=" btn btn-primary" href="users_area">Voltar</a>
   @endif
+  <a class=" btn btn-info" href="{{ route('users.create') }}">Novo</a>
 @endsection

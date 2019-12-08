@@ -26,7 +26,9 @@
  </table>
 
  <a class=" btn btn-primary" href="admins_area">Voltar</a>
- <a class=" btn btn-info" href="{{ route('subects.create') }}">Novo</a>
+ @if ( Auth::check() )
+  <a class=" btn btn-info" href="{{ route('subjects.create') }}">Novo</a>
+ @endif
 
 
  @endsection

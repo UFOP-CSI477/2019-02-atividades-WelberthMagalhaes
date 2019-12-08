@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Request extends Model
+class Requeste extends Model
 {
     protected $fillable = ['description','date'];
     protected $guarded = ['id','created_at','updated_at'];
-    protected $table = 'requests';
+    protected $table = 'requestes';
 
 
     public function subject()

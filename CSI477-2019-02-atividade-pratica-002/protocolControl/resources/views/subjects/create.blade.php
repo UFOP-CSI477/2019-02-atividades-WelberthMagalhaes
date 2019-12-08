@@ -12,7 +12,7 @@
                 <label>Nome:</label><br>
                 <input class="form-control" type="text" name="name">
                 <label>Preço:</label><br>
-                <input class="form-control" type="text" name="price" placeholder="0,00">            
+                <input class="form-control" type="text" name="price" placeholder="0.00">            
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit" name="btnSalvar" style="margin-left: 30%; margin-top: 4px">Incluir</button>
                 </div>

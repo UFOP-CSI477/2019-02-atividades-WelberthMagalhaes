@@ -1,8 +1,4 @@
 
-
-# ENCAMINHAMENTO DE VIEWS ADMIN E USER PRONTO
-# Cadastro de usuários: somente quem ta logado cadastra novos usuários
-# Criar admin CRUD de subjects(protocolos)
-# Criar na view users.index botão para ciação de usuario
-# Criar admin CRUD de requests(requisição) 
-# ÁREA DE USUÁRIO: Criar inclusão de requerimentos, alteração e exclusão
+# OBSERVAÇÃO-> Cadastro de usuários: somente quem ta logado cadastra novos usuários
+#Permitir deletar protocolos somente se não tiver requerimentos cadastrados
+# Permitir que novo usuário se cadastre
