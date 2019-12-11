@@ -18,7 +18,7 @@
     </form>
       <div class="wrapper">
           <div class="form-group">
-            <form action="{{ route('requestes.destroy', $requeste->id) }}" method="post" onsubmit="return confirm('Confirma a exclusão do protocolo?');">
+            <form action="{{ route('subjects.destroy', $subject->id) }}" method="post" onsubmit="return confirm('Confirma a exclusão do protocolo?');">
                 @csrf  
                 @method('DELETE')
                 <button class="btn btn-danger" type="submit">Excluir</button>

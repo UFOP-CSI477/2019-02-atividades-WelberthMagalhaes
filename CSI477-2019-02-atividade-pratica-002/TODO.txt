@@ -1,4 +1,4 @@
 
 # OBSERVAÇÃO-> Cadastro de usuários: somente quem ta logado cadastra novos usuários
-#Permitir deletar protocolos somente se não tiver requerimentos cadastrados
+# Permitir deletar protocolos somente se não tiver requerimentos cadastrados
 # Permitir que novo usuário se cadastre

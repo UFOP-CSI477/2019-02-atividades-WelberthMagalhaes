@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use App\Subject;
+use App\Requeste;
 
 class SubjectController extends Controller
 {
@@ -74,7 +76,20 @@ class SubjectController extends Controller
     */
   public function destroy(Subject $subject){
     
-    $subject->delete();
-    return redirect()->route('subjects.index');
+    $requeste = Requeste::where('subject_id', '{{ $subject->id }}')->get();
+  
+      foreach ($requeste as $id) {
+        if( $id == $subject->id  ){
+       
+          session()->flash('msg','Protocolo não pode ser excuído, há requisição pendente!');
+          return redirect()->route('subjects.index');
+            
+        }else{
+          
+          $subject->delete();
+          session()->flash('msg1','Protocolo deletado com sucesso!');
+          return redirect()->route('subjects.index');
+        }
+      }        
   }
 }
